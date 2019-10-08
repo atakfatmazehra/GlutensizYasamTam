@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="50dp"
+    tools:context=".RegisterActivity">
+
+    <!-- TextView: label register-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Kayıt Ol"
+        android:textColor="#75a478"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textSize="30sp"/>
+
+    <!--EditText: Input Email-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailTIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <EditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+        <!--  android:gravity="center"-->
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--EditText: Input Password -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/emailTIL"
+        app:passwordToggleEnabled="true">
+        <EditText
+            android:id="@+id/passwordEt"
+            android:inputType="textPassword"
+            android:hint="Şifre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--EditText: Input Password Again-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTIL2"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/passwordTIL"
+        app:passwordToggleEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/passwordEt2"
+            android:hint="Şifre Tekrar"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- EditText: Input Password -->
+    <Button
+        android:id="@+id/registerBtn"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordTIL2"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="23dp"
+        android:background="#75a478"
+        android:drawablePadding="5dp"
+        android:text="Kaydet" />
+
+    <TextView
+        android:id="@+id/have_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerBtn"
+        android:layout_marginTop="20dp"
+        android:text="Zaten bir hesabınız var mı? Giriş yapın"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack" />
+
+    <TextView
+        android:id="@+id/tvStrength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#b2ebf2"
+        android:textColor="@color/colorBlack"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/passwordTIL"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTIL2"
+        app:layout_constraintVertical_bias="0.32999998"
+        tools:ignore="UnknownId"
+        tools:layout_editor_absoluteX="45dp" />
+
+</RelativeLayout>

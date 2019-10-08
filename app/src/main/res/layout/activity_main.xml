@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@color/colorWhite"
+    tools:context=".MainActivity">
+    <!--    android:orientation="vertical"-->
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="369dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logokesin" />
+
+
+    <Button
+        android:id="@+id/register_btn"
+        android:text="Kayıt Ol"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:textColor="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#75a478"
+        android:drawableLeft="@drawable/ic_register_white"
+        style="@style/Widget.AppCompat.Button.Colored" />
+    <!--
+     android:background="@drawable/button_arkaplan"-->
+
+
+    <Button
+        android:id="@+id/login_btn"
+        android:text="Giriş Yap"
+        android:layout_above="@+id/register_btn"
+        android:textColor="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:background="#75a478"
+
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_login_white"
+        style="@style/Widget.AppCompat.Button.Colored"/>
+
+    <!--
+     android:layout_marginTop="440dp" ve   android:background="@drawable/button_arkaplan"
+       -->
+
+
+</RelativeLayout>
